@@ -14,12 +14,18 @@
 		8318B7B8289ECDBB0032A39B /* ForecastiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7B7289ECDBB0032A39B /* ForecastiOSAppTests.swift */; };
 		8318B7C2289ECDBB0032A39B /* ForecastiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7C1289ECDBB0032A39B /* ForecastiOSAppUITests.swift */; };
 		8318B7C4289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7C3289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift */; };
-		8318B7D4289EDD630032A39B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D3289EDD630032A39B /* Model.swift */; };
+		8318B7D4289EDD630032A39B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D3289EDD630032A39B /* Location.swift */; };
 		8318B7D7289FBA610032A39B /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D6289FBA610032A39B /* BaseOperation.swift */; };
 		8318B7D9289FBD020032A39B /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D8289FBD020032A39B /* APIOperation.swift */; };
 		8318B7DB289FBFDD0032A39B /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7DA289FBFDD0032A39B /* NetworkChecker.swift */; };
 		8318B7DF289FC3250032A39B /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7DE289FC3250032A39B /* URLConstants.swift */; };
-		8318B7E3289FC6460032A39B /* GetForecastOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7E2289FC6460032A39B /* GetForecastOperation.swift */; };
+		8318B7E3289FC6460032A39B /* GetLocationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7E2289FC6460032A39B /* GetLocationOperation.swift */; };
+		8318B7E5289FCCAA0032A39B /* GetForecastForLocationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7E4289FCCAA0032A39B /* GetForecastForLocationOperation.swift */; };
+		8318B7E7289FCD300032A39B /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7E6289FCD300032A39B /* Forecast.swift */; };
+		8318B7EA289FCD920032A39B /* Curie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7E9289FCD920032A39B /* Curie.swift */; };
+		8318B7EC289FCDA60032A39B /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7EB289FCDA60032A39B /* Link.swift */; };
+		8318B7EE289FCDCE0032A39B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7ED289FCDCD0032A39B /* Resource.swift */; };
+		8318B7F0289FCDE40032A39B /* Embedded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7EF289FCDE40032A39B /* Embedded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +56,18 @@
 		8318B7BD289ECDBB0032A39B /* ForecastiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8318B7C1289ECDBB0032A39B /* ForecastiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppUITests.swift; sourceTree = "<group>"; };
 		8318B7C3289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8318B7D3289EDD630032A39B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8318B7D3289EDD630032A39B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8318B7D6289FBA610032A39B /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		8318B7D8289FBD020032A39B /* APIOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
 		8318B7DA289FBFDD0032A39B /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		8318B7DE289FC3250032A39B /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
-		8318B7E2289FC6460032A39B /* GetForecastOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastOperation.swift; sourceTree = "<group>"; };
+		8318B7E2289FC6460032A39B /* GetLocationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationOperation.swift; sourceTree = "<group>"; };
+		8318B7E4289FCCAA0032A39B /* GetForecastForLocationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastForLocationOperation.swift; sourceTree = "<group>"; };
+		8318B7E6289FCD300032A39B /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		8318B7E9289FCD920032A39B /* Curie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curie.swift; sourceTree = "<group>"; };
+		8318B7EB289FCDA60032A39B /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		8318B7ED289FCDCD0032A39B /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		8318B7EF289FCDE40032A39B /* Embedded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Embedded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +156,9 @@
 		8318B7D2289EDD4E0032A39B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8318B7D3289EDD630032A39B /* Model.swift */,
+				8318B7E6289FCD300032A39B /* Forecast.swift */,
+				8318B7D3289EDD630032A39B /* Location.swift */,
+				8318B7F1289FCDEC0032A39B /* Commons */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,8 +192,8 @@
 		8318B7E0289FC5F70032A39B /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				8318B7D6289FBA610032A39B /* BaseOperation.swift */,
 				8318B7D8289FBD020032A39B /* APIOperation.swift */,
+				8318B7D6289FBA610032A39B /* BaseOperation.swift */,
 				8318B7DA289FBFDD0032A39B /* NetworkChecker.swift */,
 			);
 			path = Base;
@@ -188,9 +202,21 @@
 		8318B7E1289FC6000032A39B /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				8318B7E2289FC6460032A39B /* GetForecastOperation.swift */,
+				8318B7E2289FC6460032A39B /* GetLocationOperation.swift */,
+				8318B7E4289FCCAA0032A39B /* GetForecastForLocationOperation.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		8318B7F1289FCDEC0032A39B /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7EF289FCDE40032A39B /* Embedded.swift */,
+				8318B7E9289FCD920032A39B /* Curie.swift */,
+				8318B7EB289FCDA60032A39B /* Link.swift */,
+				8318B7ED289FCDCD0032A39B /* Resource.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,14 +349,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8318B7EE289FCDCE0032A39B /* Resource.swift in Sources */,
 				8318B7A9289ECDB70032A39B /* ContentView.swift in Sources */,
+				8318B7E5289FCCAA0032A39B /* GetForecastForLocationOperation.swift in Sources */,
+				8318B7EA289FCD920032A39B /* Curie.swift in Sources */,
+				8318B7EC289FCDA60032A39B /* Link.swift in Sources */,
 				8318B7D9289FBD020032A39B /* APIOperation.swift in Sources */,
 				8318B7DB289FBFDD0032A39B /* NetworkChecker.swift in Sources */,
+				8318B7E7289FCD300032A39B /* Forecast.swift in Sources */,
 				8318B7DF289FC3250032A39B /* URLConstants.swift in Sources */,
+				8318B7F0289FCDE40032A39B /* Embedded.swift in Sources */,
 				8318B7D7289FBA610032A39B /* BaseOperation.swift in Sources */,
-				8318B7E3289FC6460032A39B /* GetForecastOperation.swift in Sources */,
+				8318B7E3289FC6460032A39B /* GetLocationOperation.swift in Sources */,
 				8318B7A7289ECDB70032A39B /* ForecastiOSAppApp.swift in Sources */,
-				8318B7D4289EDD630032A39B /* Model.swift in Sources */,
+				8318B7D4289EDD630032A39B /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

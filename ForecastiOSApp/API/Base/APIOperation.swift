@@ -18,7 +18,7 @@ struct APIError: Error, Equatable {
     
     static let noConnection = APIError(.noConnection, statusCode: 0)
     static let timeout = APIError(.timeout, statusCode: 1)
-    static let unauthorized = APIError(.unauthorized, statusCode: 402)
+    static let unauthorized = APIError(.unauthorized, statusCode: 401)
     static let invalidResponse = APIError(.invalidResponse, statusCode: 403)
     static let notFound = APIError(.notFound, statusCode: 404)
     static let serverNotReachable = APIError(.serverNotReachable, statusCode: 500)

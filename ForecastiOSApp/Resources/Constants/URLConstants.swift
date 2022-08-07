@@ -10,7 +10,7 @@ struct URLConstants {
         static let baseURL = "https://www.yr.no/api/v0/"
         
         private static let locationsForecastURL = "locations/%@/forecast"
-        static func getLocationsForecastByIdURL(id: String) -> String {
+        static func getLocationForecastByIdURL(id: String) -> String {
             return String(format: self.locationsForecastURL, id)
         }
         
