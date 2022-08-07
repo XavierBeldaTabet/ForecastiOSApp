@@ -14,6 +14,12 @@
 		8318B7B8289ECDBB0032A39B /* ForecastiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7B7289ECDBB0032A39B /* ForecastiOSAppTests.swift */; };
 		8318B7C2289ECDBB0032A39B /* ForecastiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7C1289ECDBB0032A39B /* ForecastiOSAppUITests.swift */; };
 		8318B7C4289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7C3289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift */; };
+		8318B7D4289EDD630032A39B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D3289EDD630032A39B /* Model.swift */; };
+		8318B7D7289FBA610032A39B /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D6289FBA610032A39B /* BaseOperation.swift */; };
+		8318B7D9289FBD020032A39B /* APIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D8289FBD020032A39B /* APIOperation.swift */; };
+		8318B7DB289FBFDD0032A39B /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7DA289FBFDD0032A39B /* NetworkChecker.swift */; };
+		8318B7DF289FC3250032A39B /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7DE289FC3250032A39B /* URLConstants.swift */; };
+		8318B7E3289FC6460032A39B /* GetForecastOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7E2289FC6460032A39B /* GetForecastOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		8318B7BD289ECDBB0032A39B /* ForecastiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8318B7C1289ECDBB0032A39B /* ForecastiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppUITests.swift; sourceTree = "<group>"; };
 		8318B7C3289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8318B7D3289EDD630032A39B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8318B7D6289FBA610032A39B /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
+		8318B7D8289FBD020032A39B /* APIOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperation.swift; sourceTree = "<group>"; };
+		8318B7DA289FBFDD0032A39B /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
+		8318B7DE289FC3250032A39B /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		8318B7E2289FC6460032A39B /* GetForecastOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +106,12 @@
 		8318B7A5289ECDB70032A39B /* ForecastiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				8318B7A6289ECDB70032A39B /* ForecastiOSAppApp.swift */,
 				8318B7A8289ECDB70032A39B /* ContentView.swift */,
-				8318B7AA289ECDBB0032A39B /* Assets.xcassets */,
+				8318B7A6289ECDB70032A39B /* ForecastiOSAppApp.swift */,
+				8318B7D5289FB8440032A39B /* API */,
+				8318B7D2289EDD4E0032A39B /* Models */,
 				8318B7AC289ECDBB0032A39B /* Preview Content */,
+				8318B7DC289FC3000032A39B /* Resources */,
 			);
 			path = ForecastiOSApp;
 			sourceTree = "<group>";
@@ -125,6 +139,58 @@
 				8318B7C3289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift */,
 			);
 			path = ForecastiOSAppUITests;
+			sourceTree = "<group>";
+		};
+		8318B7D2289EDD4E0032A39B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7D3289EDD630032A39B /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8318B7D5289FB8440032A39B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7E0289FC5F70032A39B /* Base */,
+				8318B7E1289FC6000032A39B /* Operations */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8318B7DC289FC3000032A39B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7AA289ECDBB0032A39B /* Assets.xcassets */,
+				8318B7DD289FC30C0032A39B /* Constants */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8318B7DD289FC30C0032A39B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7DE289FC3250032A39B /* URLConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8318B7E0289FC5F70032A39B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7D6289FBA610032A39B /* BaseOperation.swift */,
+				8318B7D8289FBD020032A39B /* APIOperation.swift */,
+				8318B7DA289FBFDD0032A39B /* NetworkChecker.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8318B7E1289FC6000032A39B /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7E2289FC6460032A39B /* GetForecastOperation.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8318B7A9289ECDB70032A39B /* ContentView.swift in Sources */,
+				8318B7D9289FBD020032A39B /* APIOperation.swift in Sources */,
+				8318B7DB289FBFDD0032A39B /* NetworkChecker.swift in Sources */,
+				8318B7DF289FC3250032A39B /* URLConstants.swift in Sources */,
+				8318B7D7289FBA610032A39B /* BaseOperation.swift in Sources */,
+				8318B7E3289FC6460032A39B /* GetForecastOperation.swift in Sources */,
 				8318B7A7289ECDB70032A39B /* ForecastiOSAppApp.swift in Sources */,
+				8318B7D4289EDD630032A39B /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,10 +486,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ForecastiOSApp/Preview Content\"";
-				DEVELOPMENT_TEAM = DCN7D4FF2B;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -432,6 +504,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ForecastiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,10 +516,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ForecastiOSApp/Preview Content\"";
-				DEVELOPMENT_TEAM = DCN7D4FF2B;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,6 +534,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.ForecastiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
