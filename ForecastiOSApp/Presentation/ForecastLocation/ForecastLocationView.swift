@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ForecastLocationView: View {
+    @StateObject var viewModel: ForecastLocationViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ForecastLocationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ForecastLocationView()
+        ZStack {
+            BackgroundView()
+            VStack(alignment: .leading) {
+                
+            }
+        }
     }
 }

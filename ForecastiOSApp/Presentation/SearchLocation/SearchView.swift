@@ -15,7 +15,9 @@ struct SearchView: View {
             SearchBarView(searchText: $viewModel.searchText, isTyping: $viewModel.isTyping)
             List {
                 ForEach($viewModel.filteredLocations, id: \.self) { item in
-                    SearchItemView(searchItem: item)
+                    NavigationLink(destination: viewModel.locationTapped( location: item.wrappedValue)) {
+                        Text(item.wrappedValue.name ?? "")
+                    }
                 }
                 if viewModel.hasMorePages() {
                     ProgressView()
@@ -32,10 +34,10 @@ struct SearchView: View {
                 UITableView.appearance().contentInset.bottom = -35
                 UITableView.appearance().backgroundColor = UIColor.clear
             }
-            
         }
     }
 }
+
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {

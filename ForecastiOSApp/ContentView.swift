@@ -12,15 +12,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                let colorScheme = [Color.black,
-                                   Color(red: 20/255, green: 31/255, blue: 78/255),
-                                   Color(red: 141/255, green: 87/255, blue: 151/255)]
-                let gradient = Gradient(colors: colorScheme)
-                let linearGradient = LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
-                Rectangle()
-                    .fill(linearGradient)
-                    .blur(radius: 200, opaque: true)
-                    .edgesIgnoringSafeArea(.all)
+                BackgroundView()
                 VStack {
                     Spacer(minLength: 15)
                     Text("Search for a Location")

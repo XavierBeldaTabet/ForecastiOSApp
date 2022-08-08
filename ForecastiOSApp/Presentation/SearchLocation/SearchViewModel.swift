@@ -15,7 +15,7 @@ class SearchViewModel: ObservableObject {
         case searching
     }
 
-    @Published var filteredLocations: [String] = []
+    @Published var filteredLocations: [Location] = []
     @Published var searchText: String = "" {
         didSet {
             state = .typing
@@ -31,18 +31,23 @@ class SearchViewModel: ObservableObject {
         }
     }
     
-    private var locations: [String] = []
+    private var locations: [Location] = []
     private var state: State = .normal
+    
     private var getLocationsBuilder: GetLocationsOperation.Builder
     private var getLocationBuilder: GetLocationOperation.Builder
+    private var searchViewRouter: SearchViewRouterInterface
+    
     private var totalPages: Int = -1
     private var actualPage: Int = 1
     
     init(getLocationsBuilder: @escaping GetLocationsOperation.Builder = GetLocationsOperation.defaultBuilder,
-         getLocationBuilder: @escaping GetLocationOperation.Builder = GetLocationOperation.defaultBuilder) {
+         getLocationBuilder: @escaping GetLocationOperation.Builder = GetLocationOperation.defaultBuilder,
+         searchViewRouter: SearchViewRouterInterface = SearchViewRouter()
+    ) {
         self.getLocationsBuilder = getLocationsBuilder
         self.getLocationBuilder = getLocationBuilder
-        
+        self.searchViewRouter = searchViewRouter
         getAllLocations(page: 1)
     }
     
@@ -57,6 +62,12 @@ class SearchViewModel: ObservableObject {
         actualPage != totalPages
     }
     
+    public func locationTapped(location: Location) -> ForecastLocationView {
+        return navigateToForecast(location: location)
+    }
+    
+    // MARK: - private func
+    
     private func getAllLocations(page: Int) {
         state = .searching
         let operation = getLocationsBuilder(page) { [weak self] result in
@@ -65,9 +76,7 @@ class SearchViewModel: ObservableObject {
                 switch result {
                 case .success(let locations):
                     self.totalPages = locations.totalPages ?? 0
-                    self.locations.append(contentsOf: locations.embedded?.location?.map({ location in
-                        location.name ?? ""
-                    }) ?? [])
+                    self.locations.append(contentsOf: locations.embedded?.location ?? [])
                     self.filterLocations()
                 case .failure(let error):
                     break
@@ -89,7 +98,7 @@ class SearchViewModel: ObservableObject {
                     self.state = .searchCompleted
                     switch result {
                     case .success(let location):
-                        self.locations.append(location.name ?? "")
+                        self.locations.append(location)
                     case .failure(_):
                         break
                     }
@@ -101,7 +110,16 @@ class SearchViewModel: ObservableObject {
     
     private func filterLocations() {
         filteredLocations = locations.filter { location in
-            location.hasPrefix(searchText) || searchText == ""
+            location.name?.hasPrefix(searchText) ?? false || searchText == ""
         }
+    }
+}
+
+// MARK: - Navigation
+
+extension SearchViewModel {
+    
+    private func navigateToForecast(location: Location) -> ForecastLocationView {
+        return searchViewRouter.navigateToForecastLocationView(location: location)
     }
 }

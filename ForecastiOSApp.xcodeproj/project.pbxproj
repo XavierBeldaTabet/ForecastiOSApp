@@ -26,7 +26,6 @@
 		8318B7EC289FCDA60032A39B /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7EB289FCDA60032A39B /* Link.swift */; };
 		8318B7EE289FCDCE0032A39B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7ED289FCDCD0032A39B /* Resource.swift */; };
 		8318B7F0289FCDE40032A39B /* Embedded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7EF289FCDE40032A39B /* Embedded.swift */; };
-		8318B7F4289FDAA50032A39B /* ForecastContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7F3289FDAA50032A39B /* ForecastContentView.swift */; };
 		8318B7F728A1008E0032A39B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7F628A1008E0032A39B /* SearchView.swift */; };
 		8318B7F928A107020032A39B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8318B7F828A107020032A39B /* Colors.xcassets */; };
 		8318B7FD28A107B60032A39B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7FC28A107B60032A39B /* Color.swift */; };
@@ -35,9 +34,12 @@
 		8318B80528A11FEE0032A39B /* GetLocationsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B80428A11FEE0032A39B /* GetLocationsOperation.swift */; };
 		8318B80828A121430032A39B /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B80728A121430032A39B /* Locations.swift */; };
 		8318B80A28A121E10032A39B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B80928A121E10032A39B /* Category.swift */; };
-		8318B80C28A13A190032A39B /* SearchItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B80B28A13A190032A39B /* SearchItemView.swift */; };
 		8318B80E28A1458C0032A39B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B80D28A1458C0032A39B /* View.swift */; };
 		8318B81428A1465B0032A39B /* ForecastLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B81328A1465B0032A39B /* ForecastLocationView.swift */; };
+		8318B81628A160940032A39B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B81528A160940032A39B /* BackgroundView.swift */; };
+		8318B81828A162F10032A39B /* ForecastLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B81728A162F10032A39B /* ForecastLocationViewModel.swift */; };
+		8318B81A28A168FF0032A39B /* ForecastLocationViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B81928A168FF0032A39B /* ForecastLocationViewFactory.swift */; };
+		8318B81C28A16D790032A39B /* SearchViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B81B28A16D790032A39B /* SearchViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +82,6 @@
 		8318B7EB289FCDA60032A39B /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		8318B7ED289FCDCD0032A39B /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		8318B7EF289FCDE40032A39B /* Embedded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Embedded.swift; sourceTree = "<group>"; };
-		8318B7F3289FDAA50032A39B /* ForecastContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastContentView.swift; sourceTree = "<group>"; };
 		8318B7F628A1008E0032A39B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		8318B7F828A107020032A39B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8318B7FC28A107B60032A39B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -89,9 +90,12 @@
 		8318B80428A11FEE0032A39B /* GetLocationsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsOperation.swift; sourceTree = "<group>"; };
 		8318B80728A121430032A39B /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		8318B80928A121E10032A39B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		8318B80B28A13A190032A39B /* SearchItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemView.swift; sourceTree = "<group>"; };
 		8318B80D28A1458C0032A39B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8318B81328A1465B0032A39B /* ForecastLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLocationView.swift; sourceTree = "<group>"; };
+		8318B81528A160940032A39B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		8318B81728A162F10032A39B /* ForecastLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLocationViewModel.swift; sourceTree = "<group>"; };
+		8318B81928A168FF0032A39B /* ForecastLocationViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLocationViewFactory.swift; sourceTree = "<group>"; };
+		8318B81B28A16D790032A39B /* SearchViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +149,6 @@
 				8318B7F2289FD7BA0032A39B /* Presentation */,
 				8318B7A6289ECDB70032A39B /* ForecastiOSApp.swift */,
 				8318B7A8289ECDB70032A39B /* ContentView.swift */,
-				8318B7F3289FDAA50032A39B /* ForecastContentView.swift */,
 				8318B7D5289FB8440032A39B /* Services */,
 				8318B7D2289EDD4E0032A39B /* Models */,
 				8318B7AC289ECDBB0032A39B /* Preview Content */,
@@ -263,6 +266,7 @@
 		8318B7F5289FDC770032A39B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8318B81528A160940032A39B /* BackgroundView.swift */,
 				8318B7FF28A108F80032A39B /* SearchBarView.swift */,
 			);
 			path = Views;
@@ -282,7 +286,7 @@
 			children = (
 				8318B7F628A1008E0032A39B /* SearchView.swift */,
 				8318B80228A1104A0032A39B /* SearchViewModel.swift */,
-				8318B80B28A13A190032A39B /* SearchItemView.swift */,
+				8318B81B28A16D790032A39B /* SearchViewRouter.swift */,
 			);
 			path = SearchLocation;
 			sourceTree = "<group>";
@@ -291,6 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				8318B81328A1465B0032A39B /* ForecastLocationView.swift */,
+				8318B81728A162F10032A39B /* ForecastLocationViewModel.swift */,
+				8318B81928A168FF0032A39B /* ForecastLocationViewFactory.swift */,
 			);
 			path = ForecastLocation;
 			sourceTree = "<group>";
@@ -428,6 +434,8 @@
 			files = (
 				8318B7EE289FCDCE0032A39B /* Resource.swift in Sources */,
 				8318B7A9289ECDB70032A39B /* ContentView.swift in Sources */,
+				8318B81A28A168FF0032A39B /* ForecastLocationViewFactory.swift in Sources */,
+				8318B81C28A16D790032A39B /* SearchViewRouter.swift in Sources */,
 				8318B7E5289FCCAA0032A39B /* GetForecastForLocationOperation.swift in Sources */,
 				8318B80828A121430032A39B /* Locations.swift in Sources */,
 				8318B7EA289FCD920032A39B /* Curie.swift in Sources */,
@@ -443,14 +451,14 @@
 				8318B7F0289FCDE40032A39B /* Embedded.swift in Sources */,
 				8318B80528A11FEE0032A39B /* GetLocationsOperation.swift in Sources */,
 				8318B7D7289FBA610032A39B /* BaseOperation.swift in Sources */,
-				8318B7F4289FDAA50032A39B /* ForecastContentView.swift in Sources */,
 				8318B7F728A1008E0032A39B /* SearchView.swift in Sources */,
 				8318B7E3289FC6460032A39B /* GetLocationOperation.swift in Sources */,
 				8318B81428A1465B0032A39B /* ForecastLocationView.swift in Sources */,
 				8318B7A7289ECDB70032A39B /* ForecastiOSApp.swift in Sources */,
 				8318B7D4289EDD630032A39B /* Location.swift in Sources */,
-				8318B80C28A13A190032A39B /* SearchItemView.swift in Sources */,
 				8318B80A28A121E10032A39B /* Category.swift in Sources */,
+				8318B81828A162F10032A39B /* ForecastLocationViewModel.swift in Sources */,
+				8318B81628A160940032A39B /* BackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

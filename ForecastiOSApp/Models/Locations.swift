@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Locations: Codable {
+struct Locations: Codable, Hashable {
     let totalResults: Int?
     let totalPages: Int?
     let page: Int?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Embedded: Codable {
+struct Embedded: Codable, Hashable {
     let isSourceAnArray: Bool?
     let resources: [Resource]?
     let location: [Location]?

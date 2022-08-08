@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Resource: Codable {
+struct Resource: Codable, Hashable {
     let links: [Link]
 
     enum CodingKeys: String, CodingKey {

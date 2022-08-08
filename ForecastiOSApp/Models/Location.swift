@@ -6,7 +6,7 @@
 //
 
 // MARK: - Welcome
-struct Location: Codable {
+struct Location: Codable, Hashable {
     let category: Category?
     let id: String?
     let name: String?
@@ -37,7 +37,7 @@ struct Location: Codable {
 }
 
 // MARK: - CoastalPoint
-struct CoastalPoint: Codable {
+struct CoastalPoint: Codable, Hashable {
     let lat: Double
     let lon: Double
 

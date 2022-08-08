@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Link: Codable {
+struct Link: Codable, Hashable {
     let curie: Curie?
     let rel: String?
     let href: String?

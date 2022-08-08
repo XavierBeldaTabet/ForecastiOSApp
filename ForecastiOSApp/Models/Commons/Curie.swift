@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Curie: Codable {
+struct Curie: Codable, Hashable {
     let name: String?
     let href: String?
 
