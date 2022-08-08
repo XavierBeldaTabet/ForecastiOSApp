@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8318B7A7289ECDB70032A39B /* ForecastiOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7A6289ECDB70032A39B /* ForecastiOSAppApp.swift */; };
+		8318B7A7289ECDB70032A39B /* ForecastiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7A6289ECDB70032A39B /* ForecastiOSApp.swift */; };
 		8318B7A9289ECDB70032A39B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7A8289ECDB70032A39B /* ContentView.swift */; };
 		8318B7AB289ECDBB0032A39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8318B7AA289ECDBB0032A39B /* Assets.xcassets */; };
 		8318B7AE289ECDBB0032A39B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8318B7AD289ECDBB0032A39B /* Preview Assets.xcassets */; };
@@ -26,6 +26,12 @@
 		8318B7EC289FCDA60032A39B /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7EB289FCDA60032A39B /* Link.swift */; };
 		8318B7EE289FCDCE0032A39B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7ED289FCDCD0032A39B /* Resource.swift */; };
 		8318B7F0289FCDE40032A39B /* Embedded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7EF289FCDE40032A39B /* Embedded.swift */; };
+		8318B7F4289FDAA50032A39B /* ForecastContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7F3289FDAA50032A39B /* ForecastContentView.swift */; };
+		8318B7F728A1008E0032A39B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7F628A1008E0032A39B /* SearchView.swift */; };
+		8318B7F928A107020032A39B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8318B7F828A107020032A39B /* Colors.xcassets */; };
+		8318B7FD28A107B60032A39B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7FC28A107B60032A39B /* Color.swift */; };
+		8318B80028A108F80032A39B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7FF28A108F80032A39B /* SearchBarView.swift */; };
+		8318B80328A1104A0032A39B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B80228A1104A0032A39B /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		8318B7A3289ECDB70032A39B /* ForecastiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForecastiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8318B7A6289ECDB70032A39B /* ForecastiOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppApp.swift; sourceTree = "<group>"; };
+		8318B7A6289ECDB70032A39B /* ForecastiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSApp.swift; sourceTree = "<group>"; };
 		8318B7A8289ECDB70032A39B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8318B7AA289ECDBB0032A39B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8318B7AD289ECDBB0032A39B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -68,6 +74,12 @@
 		8318B7EB289FCDA60032A39B /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		8318B7ED289FCDCD0032A39B /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		8318B7EF289FCDE40032A39B /* Embedded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Embedded.swift; sourceTree = "<group>"; };
+		8318B7F3289FDAA50032A39B /* ForecastContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastContentView.swift; sourceTree = "<group>"; };
+		8318B7F628A1008E0032A39B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		8318B7F828A107020032A39B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8318B7FC28A107B60032A39B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8318B7FF28A108F80032A39B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		8318B80228A1104A0032A39B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +130,10 @@
 		8318B7A5289ECDB70032A39B /* ForecastiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				8318B7A8289ECDB70032A39B /* ContentView.swift */,
-				8318B7A6289ECDB70032A39B /* ForecastiOSAppApp.swift */,
-				8318B7D5289FB8440032A39B /* API */,
+				8318B7F2289FD7BA0032A39B /* Presentation */,
+				8318B7A6289ECDB70032A39B /* ForecastiOSApp.swift */,
+				8318B7F3289FDAA50032A39B /* ForecastContentView.swift */,
+				8318B7D5289FB8440032A39B /* Services */,
 				8318B7D2289EDD4E0032A39B /* Models */,
 				8318B7AC289ECDBB0032A39B /* Preview Content */,
 				8318B7DC289FC3000032A39B /* Resources */,
@@ -163,20 +176,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8318B7D5289FB8440032A39B /* API */ = {
+		8318B7D5289FB8440032A39B /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				8318B7E0289FC5F70032A39B /* Base */,
 				8318B7E1289FC6000032A39B /* Operations */,
 			);
-			path = API;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8318B7DC289FC3000032A39B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8318B7FB28A107AB0032A39B /* Extensions */,
 				8318B7AA289ECDBB0032A39B /* Assets.xcassets */,
 				8318B7DD289FC30C0032A39B /* Constants */,
+				8318B7F828A107020032A39B /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +232,41 @@
 				8318B7ED289FCDCD0032A39B /* Resource.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		8318B7F2289FD7BA0032A39B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8318B80128A110270032A39B /* SearchLocation */,
+				8318B7F5289FDC770032A39B /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8318B7F5289FDC770032A39B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7A8289ECDB70032A39B /* ContentView.swift */,
+				8318B7FF28A108F80032A39B /* SearchBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8318B7FB28A107AB0032A39B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7FC28A107B60032A39B /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8318B80128A110270032A39B /* SearchLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7F628A1008E0032A39B /* SearchView.swift */,
+				8318B80228A1104A0032A39B /* SearchViewModel.swift */,
+			);
+			path = SearchLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8318B7F928A107020032A39B /* Colors.xcassets in Resources */,
 				8318B7AE289ECDBB0032A39B /* Preview Assets.xcassets in Resources */,
 				8318B7AB289ECDBB0032A39B /* Assets.xcassets in Resources */,
 			);
@@ -353,6 +404,9 @@
 				8318B7A9289ECDB70032A39B /* ContentView.swift in Sources */,
 				8318B7E5289FCCAA0032A39B /* GetForecastForLocationOperation.swift in Sources */,
 				8318B7EA289FCD920032A39B /* Curie.swift in Sources */,
+				8318B80328A1104A0032A39B /* SearchViewModel.swift in Sources */,
+				8318B7FD28A107B60032A39B /* Color.swift in Sources */,
+				8318B80028A108F80032A39B /* SearchBarView.swift in Sources */,
 				8318B7EC289FCDA60032A39B /* Link.swift in Sources */,
 				8318B7D9289FBD020032A39B /* APIOperation.swift in Sources */,
 				8318B7DB289FBFDD0032A39B /* NetworkChecker.swift in Sources */,
@@ -360,8 +414,10 @@
 				8318B7DF289FC3250032A39B /* URLConstants.swift in Sources */,
 				8318B7F0289FCDE40032A39B /* Embedded.swift in Sources */,
 				8318B7D7289FBA610032A39B /* BaseOperation.swift in Sources */,
+				8318B7F4289FDAA50032A39B /* ForecastContentView.swift in Sources */,
+				8318B7F728A1008E0032A39B /* SearchView.swift in Sources */,
 				8318B7E3289FC6460032A39B /* GetLocationOperation.swift in Sources */,
-				8318B7A7289ECDB70032A39B /* ForecastiOSAppApp.swift in Sources */,
+				8318B7A7289ECDB70032A39B /* ForecastiOSApp.swift in Sources */,
 				8318B7D4289EDD630032A39B /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

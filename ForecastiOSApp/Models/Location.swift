@@ -7,20 +7,20 @@
 
 // MARK: - Welcome
 struct Location: Codable {
-    let category: Category
-    let id: String
-    let name: String
-    let position: CoastalPoint
-    let elevation: Int
-    let coastalPoint: CoastalPoint
-    let timeZone: String
-    let urlPath: String
-    let country: Category
-    let region: Category
-    let subregion: Category
-    let isInOcean: Bool
-    let links: [Link]
-    let embedded: [Embedded]
+    let category: Category?
+    let id: String?
+    let name: String?
+    let position: CoastalPoint?
+    let elevation: Int?
+    let coastalPoint: CoastalPoint?
+    let timeZone: String?
+    let urlPath: String?
+    let country: Category?
+    let region: Category?
+    let subregion: Category?
+    let isInOcean: Bool?
+    let links: Link?
+    let embedded: [Embedded]?
 
     enum CodingKeys: String, CodingKey {
         case category = "category"

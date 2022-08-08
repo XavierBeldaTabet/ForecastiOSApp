@@ -210,11 +210,11 @@ struct SymbolCode: Codable {
 
 // MARK: - LongIntervalWind
 struct LongIntervalWind: Codable {
-    let direction: Int
-    let gust: Int
-    let speed: Int
-    let areaMaxSpeed: Int
-    let probability: Probability
+    let direction: Int?
+    let gust: Int?
+    let speed: Int?
+    let areaMaxSpeed: Int?
+    let probability: Probability?
 
     enum CodingKeys: String, CodingKey {
         case direction = "direction"

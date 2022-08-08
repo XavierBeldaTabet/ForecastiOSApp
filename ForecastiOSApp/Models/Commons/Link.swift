@@ -8,16 +8,16 @@
 import Foundation
 
 struct Link: Codable {
-    let curie: Curie
-    let rel: String
-    let href: String
-    let title: String
-    let type: String
-    let deprecation: String
-    let name: String
-    let profile: String
-    let hrefLang: String
-    let isTemplated: Bool
+    let curie: Curie?
+    let rel: String?
+    let href: String?
+    let title: String?
+    let type: String?
+    let deprecation: String?
+    let name: String?
+    let profile: String?
+    let hrefLang: String?
+    let isTemplated: Bool?
 
     enum CodingKeys: String, CodingKey {
         case curie = "curie"

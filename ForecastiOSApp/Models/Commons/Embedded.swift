@@ -8,8 +8,8 @@
 import Foundation
 
 struct Embedded: Codable {
-    let isSourceAnArray: Bool
-    let resources: [Resource]
+    let isSourceAnArray: Bool?
+    let resources: [Resource]?
 
     enum CodingKeys: String, CodingKey {
         case isSourceAnArray = "isSourceAnArray"

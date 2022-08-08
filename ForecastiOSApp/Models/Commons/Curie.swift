@@ -8,8 +8,8 @@
 import Foundation
 
 struct Curie: Codable {
-    let name: String
-    let href: String
+    let name: String?
+    let href: String?
 
     enum CodingKeys: String, CodingKey {
         case name = "name"
