@@ -10,9 +10,11 @@ import Foundation
 struct Embedded: Codable {
     let isSourceAnArray: Bool?
     let resources: [Resource]?
-
+    let location: [Location]?
+    
     enum CodingKeys: String, CodingKey {
         case isSourceAnArray = "isSourceAnArray"
         case resources = "resources"
+        case location = "location"
     }
 }

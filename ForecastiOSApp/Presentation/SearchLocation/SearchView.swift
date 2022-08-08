@@ -13,13 +13,26 @@ struct SearchView: View {
     var body: some View {
         VStack(alignment: .leading) {
             SearchBarView(searchText: $viewModel.searchText, isTyping: $viewModel.isTyping)
-            List($viewModel.locations, id: \.self) { location in
-                Text(location.wrappedValue)
+            List {
+                ForEach($viewModel.filteredLocations, id: \.self) { item in
+                    SearchItemView(searchItem: item)
+                }
+                if viewModel.hasMorePages() {
+                    ProgressView()
+                        .onAppear {
+                            viewModel.fetchMoreLocations()
+                        }
+                }
             }
             .listStyle(GroupedListStyle())
+            .cornerRadius(30)
+            .padding(.horizontal, 15)
             .onAppear() {
+                UITableView.appearance().contentInset.top = -35
+                UITableView.appearance().contentInset.bottom = -35
                 UITableView.appearance().backgroundColor = UIColor.clear
             }
+            
         }
     }
 }

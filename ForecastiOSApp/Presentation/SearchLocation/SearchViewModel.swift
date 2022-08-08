@@ -12,30 +12,76 @@ class SearchViewModel: ObservableObject {
         case normal
         case searchCompleted
         case typing
-        case isSearching
+        case searching
     }
 
-    @Published var locations: [String] = []
+    @Published var filteredLocations: [String] = []
     @Published var searchText: String = "" {
         didSet {
             state = .typing
+            filterLocations()
         }
     }
     @Published var isTyping: Bool = false {
         didSet {
             if !isTyping {
                 state = .normal
-                searchLocation()
+                filterLocations()
             }
         }
     }
     
+    private var locations: [String] = []
     private var state: State = .normal
+    private var getLocationsBuilder: GetLocationsOperation.Builder
+    private var getLocationBuilder: GetLocationOperation.Builder
+    private var totalPages: Int = -1
+    private var actualPage: Int = 1
     
+    init(getLocationsBuilder: @escaping GetLocationsOperation.Builder = GetLocationsOperation.defaultBuilder,
+         getLocationBuilder: @escaping GetLocationOperation.Builder = GetLocationOperation.defaultBuilder) {
+        self.getLocationsBuilder = getLocationsBuilder
+        self.getLocationBuilder = getLocationBuilder
+        
+        getAllLocations(page: 1)
+    }
     
-    func searchLocation() {
+    public func fetchMoreLocations() {
+        if hasMorePages() && state != .searching {
+            actualPage += 1
+            getAllLocations(page: actualPage)
+        }
+    }
+    
+    public func hasMorePages() -> Bool {
+        actualPage != totalPages
+    }
+    
+    private func getAllLocations(page: Int) {
+        state = .searching
+        let operation = getLocationsBuilder(page) { [weak self] result in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let locations):
+                    self.totalPages = locations.totalPages ?? 0
+                    self.locations.append(contentsOf: locations.embedded?.location?.map({ location in
+                        location.name ?? ""
+                    }) ?? [])
+                    self.filterLocations()
+                case .failure(let error):
+                    break
+                }
+                self.state = .searchCompleted
+            }
+        }
+        
+        operation.start()
+    }
+    
+    private func searchLocation() {
         if state != .typing {
-            state = .isSearching
+            state = .searching
             
             let operation = GetLocationOperation(location: searchText) { [weak self] result in
                 guard let self = self else { return }
@@ -44,12 +90,18 @@ class SearchViewModel: ObservableObject {
                     switch result {
                     case .success(let location):
                         self.locations.append(location.name ?? "")
-                    case .failure(let error):
+                    case .failure(_):
                         break
                     }
                 }
             }
             operation.start()
+        }
+    }
+    
+    private func filterLocations() {
+        filteredLocations = locations.filter { location in
+            location.hasPrefix(searchText) || searchText == ""
         }
     }
 }

@@ -19,8 +19,6 @@ struct Location: Codable {
     let region: Category?
     let subregion: Category?
     let isInOcean: Bool?
-    let links: Link?
-    let embedded: [Embedded]?
 
     enum CodingKeys: String, CodingKey {
         case category = "category"
@@ -35,26 +33,13 @@ struct Location: Codable {
         case region = "region"
         case subregion = "subregion"
         case isInOcean = "isInOcean"
-        case links = "_links"
-        case embedded = "_embedded"
-    }
-}
-
-// MARK: - Category
-struct Category: Codable {
-    let id: String
-    let name: String
-
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
     }
 }
 
 // MARK: - CoastalPoint
 struct CoastalPoint: Codable {
-    let lat: Int
-    let lon: Int
+    let lat: Double
+    let lon: Double
 
     enum CodingKeys: String, CodingKey {
         case lat = "lat"
