@@ -22,7 +22,7 @@ class SearchViewModel: ObservableObject {
             filterLocations()
         }
     }
-    @Published var isTyping: Bool = false {
+    var isTyping: Bool = false {
         didSet {
             if !isTyping {
                 state = .normal
@@ -78,7 +78,7 @@ class SearchViewModel: ObservableObject {
                     self.totalPages = locations.totalPages ?? 0
                     self.locations.append(contentsOf: locations.embedded?.location ?? [])
                     self.filterLocations()
-                case .failure(let error):
+                case .failure(_):
                     break
                 }
                 self.state = .searchCompleted

@@ -20,7 +20,7 @@ struct ContentView: View {
                         .fontWeight(.light)
                         .foregroundColor(.white)
                     Spacer(minLength: 15)
-                    SearchView()
+                    SearchViewFactory().make()
                     Spacer(minLength: 15)
                 }
                 .hiddenNavigationBarStyle()
