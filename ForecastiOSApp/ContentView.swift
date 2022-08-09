@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ZStack {
+                BackgroundView()
+                VStack {
+                    Spacer(minLength: 15)
+                    Text("Search for a Location")
+                        .font(.title)
+                        .fontWeight(.light)
+                        .foregroundColor(.white)
+                    Spacer(minLength: 15)
+                    SearchViewFactory().make()
+                    Spacer(minLength: 15)
+                }
+                .hiddenNavigationBarStyle()
+            }.preferredColorScheme(.dark)
+        }
     }
 }
 
