@@ -1,0 +1,6 @@
+framework module Pods_ForecastiOSApp_ForecastiOSAppUITests {
+  umbrella header "Pods-ForecastiOSApp-ForecastiOSAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
