@@ -6,15 +6,35 @@
 //
 import Foundation
 
-struct Forecast: Codable {
-    let created: Date
-    let update: Date
-    let uv: Uv
-    let dayIntervals: [DayInterval]
-    let shortIntervals: [Interval]
-    let longIntervals: [Interval]
-    let links: [Link]
-    let embedded: [Embedded]
+enum ForecastData: String, Codable, Hashable {
+    case rainshowers_day
+    case rainshowers_night
+    case rain
+    case cloud
+    case lightrain
+    case lightrainshowers_day
+    case lightrainshowers_night
+    case partlycloudy_night
+    case partlycloudy_day
+    case clearsky_day
+    case clearsky_night
+    case fair_day
+    case fair_night
+    case heavyrain
+    case heavyrainshowers_night
+    case heavyrainshowers_day
+    case fog
+}
+
+struct Forecast: Codable, Hashable {
+    let created: String?
+    let update: String?
+    let uv: Uv?
+    let dayIntervals: [DayInterval]?
+    let shortIntervals: [Interval]?
+    let longIntervals: [Interval]?
+    let links: Link?
+    let embedded: [Embedded]?
 
     enum CodingKeys: String, CodingKey {
         case created = "created"
@@ -29,23 +49,19 @@ struct Forecast: Codable {
 }
 
 // MARK: - DayInterval
-struct DayInterval: Codable {
-    let start: Date
-    let end: Date
-    let twentyFourHourSymbol: String
-    let twelveHourSymbols: [String]
-    let sixHourSymbols: [String]
-    let symbolConfidence: String
-    let precipitation: Precipitation
-    let temperature: Temperature
-    let wind: DayIntervalWind
+struct DayInterval: Codable, Hashable {
+    let start: String?
+    let end: String?
+    let twentyFourHourSymbol: ForecastData?
+    let symbolConfidence: String?
+    let precipitation: Precipitation?
+    let temperature: Temperature?
+    let wind: DayIntervalWind?
 
     enum CodingKeys: String, CodingKey {
         case start = "start"
         case end = "end"
         case twentyFourHourSymbol = "twentyFourHourSymbol"
-        case twelveHourSymbols = "twelveHourSymbols"
-        case sixHourSymbols = "sixHourSymbols"
         case symbolConfidence = "symbolConfidence"
         case precipitation = "precipitation"
         case temperature = "temperature"
@@ -54,12 +70,12 @@ struct DayInterval: Codable {
 }
 
 // MARK: - Precipitation
-struct Precipitation: Codable {
-    let min: Int
-    let max: Int
-    let value: Int
-    let pop: Int
-    let probability: Int
+struct Precipitation: Codable, Hashable {
+    let min: Double?
+    let max: Double?
+    let value: Double?
+    let pop: Double?
+    let probability: Double?
 
     enum CodingKeys: String, CodingKey {
         case min = "min"
@@ -71,12 +87,12 @@ struct Precipitation: Codable {
 }
 
 // MARK: - Temperature
-struct Temperature: Codable {
-    let value: Int
-    let min: Int
-    let max: Int
-    let feelsLike: Int
-    let probability: Probability
+struct Temperature: Codable, Hashable {
+    let value: Double?
+    let min: Double?
+    let max: Double?
+    let feelsLike: Double?
+    let probability: Probability?
 
     enum CodingKeys: String, CodingKey {
         case value = "value"
@@ -88,9 +104,9 @@ struct Temperature: Codable {
 }
 
 // MARK: - Probability
-struct Probability: Codable {
-    let tenPercentile: Int
-    let ninetyPercentile: Int
+struct Probability: Codable, Hashable {
+    let tenPercentile: Double?
+    let ninetyPercentile: Double?
 
     enum CodingKeys: String, CodingKey {
         case tenPercentile = "tenPercentile"
@@ -99,10 +115,10 @@ struct Probability: Codable {
 }
 
 // MARK: - DayIntervalWind
-struct DayIntervalWind: Codable {
-    let min: Int
-    let max: Int
-    let maxGust: Int
+struct DayIntervalWind: Codable, Hashable{
+    let min: Double?
+    let max: Double?
+    let maxGust: Double?
 
     enum CodingKeys: String, CodingKey {
         case min = "min"
@@ -112,22 +128,22 @@ struct DayIntervalWind: Codable {
 }
 
 // MARK: - Interval
-struct Interval: Codable {
-    let symbol: Symbol
-    let symbolCode: SymbolCode
-    let precipitation: Precipitation
-    let temperature: Temperature
-    let wind: LongIntervalWind
-    let feelsLike: DewPoint
-    let pressure: DewPoint
-    let uvIndex: DewPoint
-    let cloudCover: CloudCover
-    let humidity: DewPoint
-    let dewPoint: DewPoint
-    let start: Date
-    let end: Date
-    let nominalStart: String
-    let nominalEnd: String
+struct Interval: Codable, Hashable {
+    let symbol: Symbol?
+    let symbolCode: SymbolCode?
+    let precipitation: Precipitation?
+    let temperature: Temperature?
+    let wind: LongIntervalWind?
+    let feelsLike: DewPoint?
+    let pressure: DewPoint?
+    let uvIndex: DewPoint?
+    let cloudCover: CloudCover?
+    let humidity: DewPoint?
+    let dewPoint: DewPoint?
+    let start: String?
+    let end: String?
+    let nominalStart: String?
+    let nominalEnd: String?
 
     enum CodingKeys: String, CodingKey {
         case symbol = "symbol"
@@ -149,12 +165,12 @@ struct Interval: Codable {
 }
 
 // MARK: - CloudCover
-struct CloudCover: Codable {
-    let value: Int
-    let high: Int
-    let middle: Int
-    let low: Int
-    let fog: Int
+struct CloudCover: Codable, Hashable {
+    let value: Double?
+    let high: Double?
+    let middle: Double?
+    let low: Double?
+    let fog: Double?
 
     enum CodingKeys: String, CodingKey {
         case value = "value"
@@ -166,8 +182,8 @@ struct CloudCover: Codable {
 }
 
 // MARK: - DewPoint
-struct DewPoint: Codable {
-    let value: Int
+struct DewPoint: Codable, Hashable {
+    let value: Double?
 
     enum CodingKeys: String, CodingKey {
         case value = "value"
@@ -175,14 +191,14 @@ struct DewPoint: Codable {
 }
 
 // MARK: - Symbol
-struct Symbol: Codable {
-    let sunup: Bool
-    let n: Int
-    let clouds: Int
-    let thunder: Bool
-    let precipPhase: String
-    let precip: Int
-    let symbolVar: String
+struct Symbol: Codable, Hashable {
+    let sunup: Bool?
+    let n: Double?
+    let clouds: Double?
+    let thunder: Bool?
+    let precipPhase: String?
+    let precip: Double?
+    let symbolVar: String?
 
     enum CodingKeys: String, CodingKey {
         case sunup = "sunup"
@@ -196,10 +212,10 @@ struct Symbol: Codable {
 }
 
 // MARK: - SymbolCode
-struct SymbolCode: Codable {
-    let next1Hour: String
-    let next6Hours: String
-    let next12Hours: String
+struct SymbolCode: Codable, Hashable {
+    let next1Hour: String?
+    let next6Hours: String?
+    let next12Hours: String?
 
     enum CodingKeys: String, CodingKey {
         case next1Hour = "next1Hour"
@@ -209,11 +225,11 @@ struct SymbolCode: Codable {
 }
 
 // MARK: - LongIntervalWind
-struct LongIntervalWind: Codable {
-    let direction: Int?
-    let gust: Int?
-    let speed: Int?
-    let areaMaxSpeed: Int?
+struct LongIntervalWind: Codable, Hashable {
+    let direction: Double?
+    let gust: Double?
+    let speed: Double?
+    let areaMaxSpeed: Double?
     let probability: Probability?
 
     enum CodingKeys: String, CodingKey {
@@ -226,10 +242,10 @@ struct LongIntervalWind: Codable {
 }
 
 // MARK: - Uv
-struct Uv: Codable {
-    let duration: Duration
-    let url: String
-    let displayURL: String
+struct Uv: Codable, Hashable {
+    let duration: Duration?
+    let url: String?
+    let displayURL: String?
 
     enum CodingKeys: String, CodingKey {
         case duration = "duration"
@@ -239,9 +255,9 @@ struct Uv: Codable {
 }
 
 // MARK: - Duration
-struct Duration: Codable {
-    let days: Int
-    let hours: Int
+struct Duration: Codable, Hashable {
+    let days: Double?
+    let hours: Double?
 
     enum CodingKeys: String, CodingKey {
         case days = "days"
