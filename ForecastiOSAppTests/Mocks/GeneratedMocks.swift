@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: ForecastiOSApp/Presentation/ForecastLocation/ForecastLocationViewFactory.swift at 2022-08-09 17:36:22 +0000
+// MARK: - Mocks generated from file: ForecastiOSApp/Presentation/ForecastLocation/ForecastLocationViewFactory.swift at 2022-08-09 15:26:09 +0000
 
 //
 //  ForecastLocationFactory.swift
@@ -250,7 +250,7 @@ import Cuckoo
 
 
 
-// MARK: - Mocks generated from file: ForecastiOSApp/Presentation/SearchLocation/SearchViewFactory.swift at 2022-08-09 17:36:22 +0000
+// MARK: - Mocks generated from file: ForecastiOSApp/Presentation/SearchLocation/SearchViewFactory.swift at 2022-08-09 15:26:09 +0000
 
 //
 //  SearchLocationViewFactory.swift
@@ -504,7 +504,7 @@ import Foundation
 
 
 
-// MARK: - Mocks generated from file: ForecastiOSApp/Presentation/SearchLocation/SearchViewRouter.swift at 2022-08-09 17:36:22 +0000
+// MARK: - Mocks generated from file: ForecastiOSApp/Presentation/SearchLocation/SearchViewRouter.swift at 2022-08-09 15:26:09 +0000
 
 //
 //  SearchViewRouter.swift
@@ -753,7 +753,4 @@ import Foundation
     
     
 }
-
-
-
 

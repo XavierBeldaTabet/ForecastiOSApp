@@ -13,7 +13,7 @@
 		8318B7A9289ECDB70032A39B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7A8289ECDB70032A39B /* ContentView.swift */; };
 		8318B7AB289ECDBB0032A39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8318B7AA289ECDBB0032A39B /* Assets.xcassets */; };
 		8318B7AE289ECDBB0032A39B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8318B7AD289ECDBB0032A39B /* Preview Assets.xcassets */; };
-		8318B7B8289ECDBB0032A39B /* ForecastiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7B7289ECDBB0032A39B /* ForecastiOSAppTests.swift */; };
+		8318B7B8289ECDBB0032A39B /* ForecastLocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7B7289ECDBB0032A39B /* ForecastLocationViewModelTests.swift */; };
 		8318B7C2289ECDBB0032A39B /* ForecastiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7C1289ECDBB0032A39B /* ForecastiOSAppUITests.swift */; };
 		8318B7C4289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7C3289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift */; };
 		8318B7D4289EDD630032A39B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8318B7D3289EDD630032A39B /* Location.swift */; };
@@ -49,6 +49,17 @@
 		837B9EE028A289220009EEA1 /* ForecastNextDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EDF28A289220009EEA1 /* ForecastNextDaysView.swift */; };
 		837B9EE628A28D770009EEA1 /* SearchViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EE528A28D770009EEA1 /* SearchViewFactory.swift */; };
 		837B9EEC28A2B1CA0009EEA1 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EEB28A2B1CA0009EEA1 /* GeneratedMocks.swift */; };
+		837B9EF228A2B6B00009EEA1 /* MockAPIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EF128A2B6B00009EEA1 /* MockAPIOperation.swift */; };
+		837B9EF428A2B6D30009EEA1 /* MockGetForecastForLocationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EF328A2B6D30009EEA1 /* MockGetForecastForLocationOperation.swift */; };
+		837B9EF628A2B72A0009EEA1 /* MockGetLocationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EF528A2B72A0009EEA1 /* MockGetLocationOperation.swift */; };
+		837B9EF828A2B76C0009EEA1 /* MockGetLocationsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EF728A2B76C0009EEA1 /* MockGetLocationsOperation.swift */; };
+		837B9EFB28A2BA920009EEA1 /* MockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EFA28A2BA920009EEA1 /* MockLocation.swift */; };
+		837B9EFD28A2BAEE0009EEA1 /* MockForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EFC28A2BAEE0009EEA1 /* MockForecast.swift */; };
+		837B9EFF28A2C54A0009EEA1 /* ForecastLocationViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9EFE28A2C54A0009EEA1 /* ForecastLocationViewFactoryTests.swift */; };
+		837B9F0228A2C69A0009EEA1 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9F0128A2C69A0009EEA1 /* SearchViewModelTests.swift */; };
+		837B9F0428A2C9A50009EEA1 /* MockLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9F0328A2C9A50009EEA1 /* MockLocations.swift */; };
+		837B9F0628A2CFC20009EEA1 /* SearchViewRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9F0528A2CFC20009EEA1 /* SearchViewRouterTests.swift */; };
+		837B9F0828A2D20F0009EEA1 /* SearchViewFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837B9F0728A2D20F0009EEA1 /* SearchViewFactoryTests.swift */; };
 		CA3ECB25E33D8D82F36CD8DB /* Pods_ForecastiOSAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349A2D18FE4A43FA9584BE32 /* Pods_ForecastiOSAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +94,7 @@
 		8318B7AA289ECDBB0032A39B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8318B7AD289ECDBB0032A39B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8318B7B3289ECDBB0032A39B /* ForecastiOSAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastiOSAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8318B7B7289ECDBB0032A39B /* ForecastiOSAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppTests.swift; sourceTree = "<group>"; };
+		8318B7B7289ECDBB0032A39B /* ForecastLocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLocationViewModelTests.swift; sourceTree = "<group>"; };
 		8318B7BD289ECDBB0032A39B /* ForecastiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8318B7C1289ECDBB0032A39B /* ForecastiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppUITests.swift; sourceTree = "<group>"; };
 		8318B7C3289ECDBB0032A39B /* ForecastiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -120,6 +131,17 @@
 		837B9EDF28A289220009EEA1 /* ForecastNextDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastNextDaysView.swift; sourceTree = "<group>"; };
 		837B9EE528A28D770009EEA1 /* SearchViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewFactory.swift; sourceTree = "<group>"; };
 		837B9EEB28A2B1CA0009EEA1 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		837B9EF128A2B6B00009EEA1 /* MockAPIOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIOperation.swift; sourceTree = "<group>"; };
+		837B9EF328A2B6D30009EEA1 /* MockGetForecastForLocationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetForecastForLocationOperation.swift; sourceTree = "<group>"; };
+		837B9EF528A2B72A0009EEA1 /* MockGetLocationOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetLocationOperation.swift; sourceTree = "<group>"; };
+		837B9EF728A2B76C0009EEA1 /* MockGetLocationsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetLocationsOperation.swift; sourceTree = "<group>"; };
+		837B9EFA28A2BA920009EEA1 /* MockLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocation.swift; sourceTree = "<group>"; };
+		837B9EFC28A2BAEE0009EEA1 /* MockForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockForecast.swift; sourceTree = "<group>"; };
+		837B9EFE28A2C54A0009EEA1 /* ForecastLocationViewFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLocationViewFactoryTests.swift; sourceTree = "<group>"; };
+		837B9F0128A2C69A0009EEA1 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		837B9F0328A2C9A50009EEA1 /* MockLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocations.swift; sourceTree = "<group>"; };
+		837B9F0528A2CFC20009EEA1 /* SearchViewRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewRouterTests.swift; sourceTree = "<group>"; };
+		837B9F0728A2D20F0009EEA1 /* SearchViewFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewFactoryTests.swift; sourceTree = "<group>"; };
 		8BD7EE5923456047FE7F86A0 /* Pods-ForecastiOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecastiOSApp.release.xcconfig"; path = "Target Support Files/Pods-ForecastiOSApp/Pods-ForecastiOSApp.release.xcconfig"; sourceTree = "<group>"; };
 		AE79A5D0AA8B5018524EFD4B /* Pods-ForecastiOSAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForecastiOSAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ForecastiOSAppTests/Pods-ForecastiOSAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,8 +244,8 @@
 		8318B7B6289ECDBB0032A39B /* ForecastiOSAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				837B9EEB28A2B1CA0009EEA1 /* GeneratedMocks.swift */,
-				8318B7B7289ECDBB0032A39B /* ForecastiOSAppTests.swift */,
+				837B9EEF28A2B6550009EEA1 /* Mocks */,
+				837B9EED28A2B28C0009EEA1 /* Presentation */,
 			);
 			path = ForecastiOSAppTests;
 			sourceTree = "<group>";
@@ -392,6 +414,65 @@
 				8318B80228A1104A0032A39B /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		837B9EED28A2B28C0009EEA1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				837B9F0028A2C6860009EEA1 /* SearchLocation */,
+				837B9EEE28A2B2950009EEA1 /* ForecastLocation */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		837B9EEE28A2B2950009EEA1 /* ForecastLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8318B7B7289ECDBB0032A39B /* ForecastLocationViewModelTests.swift */,
+				837B9EFE28A2C54A0009EEA1 /* ForecastLocationViewFactoryTests.swift */,
+			);
+			path = ForecastLocation;
+			sourceTree = "<group>";
+		};
+		837B9EEF28A2B6550009EEA1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				837B9EF928A2BA850009EEA1 /* Models */,
+				837B9EF028A2B65D0009EEA1 /* Operations */,
+				837B9EEB28A2B1CA0009EEA1 /* GeneratedMocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		837B9EF028A2B65D0009EEA1 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				837B9EF128A2B6B00009EEA1 /* MockAPIOperation.swift */,
+				837B9EF328A2B6D30009EEA1 /* MockGetForecastForLocationOperation.swift */,
+				837B9EF528A2B72A0009EEA1 /* MockGetLocationOperation.swift */,
+				837B9EF728A2B76C0009EEA1 /* MockGetLocationsOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		837B9EF928A2BA850009EEA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				837B9EFA28A2BA920009EEA1 /* MockLocation.swift */,
+				837B9EFC28A2BAEE0009EEA1 /* MockForecast.swift */,
+				837B9F0328A2C9A50009EEA1 /* MockLocations.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		837B9F0028A2C6860009EEA1 /* SearchLocation */ = {
+			isa = PBXGroup;
+			children = (
+				837B9F0128A2C69A0009EEA1 /* SearchViewModelTests.swift */,
+				837B9F0528A2CFC20009EEA1 /* SearchViewRouterTests.swift */,
+				837B9F0728A2D20F0009EEA1 /* SearchViewFactoryTests.swift */,
+			);
+			path = SearchLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -673,8 +754,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8318B7B8289ECDBB0032A39B /* ForecastiOSAppTests.swift in Sources */,
+				837B9F0828A2D20F0009EEA1 /* SearchViewFactoryTests.swift in Sources */,
+				8318B7B8289ECDBB0032A39B /* ForecastLocationViewModelTests.swift in Sources */,
+				837B9EF628A2B72A0009EEA1 /* MockGetLocationOperation.swift in Sources */,
+				837B9EFF28A2C54A0009EEA1 /* ForecastLocationViewFactoryTests.swift in Sources */,
+				837B9EF228A2B6B00009EEA1 /* MockAPIOperation.swift in Sources */,
+				837B9F0228A2C69A0009EEA1 /* SearchViewModelTests.swift in Sources */,
+				837B9EF428A2B6D30009EEA1 /* MockGetForecastForLocationOperation.swift in Sources */,
 				837B9EEC28A2B1CA0009EEA1 /* GeneratedMocks.swift in Sources */,
+				837B9F0628A2CFC20009EEA1 /* SearchViewRouterTests.swift in Sources */,
+				837B9EF828A2B76C0009EEA1 /* MockGetLocationsOperation.swift in Sources */,
+				837B9EFD28A2BAEE0009EEA1 /* MockForecast.swift in Sources */,
+				837B9F0428A2C9A50009EEA1 /* MockLocations.swift in Sources */,
+				837B9EFB28A2BA920009EEA1 /* MockLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
